@@ -16,7 +16,7 @@
     "axios": "^0.26.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router": "^6.2.2",
+    "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.3",
     "typescript": "^4.6.2",
@@ -38,6 +38,14 @@
     "rules": {
       "import/extensions": 0,
       "import/no-unresolved": 0,
+      "comma-dangle": 0,
+      "object-curly-newline": 0,
+      "react/function-component-definition": [
+        2,
+        {
+          "namedComponents": "arrow-function"
+        }
+      ],
       "semi": "error",
       "react/jsx-filename-extension": [
         1,
