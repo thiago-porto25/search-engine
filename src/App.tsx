@@ -2,6 +2,7 @@ import { useMemo, useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import { ThemeContext } from 'context/themeContext';
+import { SearchContextProvider } from 'context/searchContext';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import getDesignTokens from 'styles/theme';
@@ -18,16 +19,18 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <Routes>
-        <Route path={CONSTANTS.HOME}>
-          <Route index element={<Home />} />
-          <Route path={CONSTANTS.RESULTS} element={<Results />} />
-          <Route path={CONSTANTS.INFO} element={<Info />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
+      <SearchContextProvider>
+        <Header />
+        <Routes>
+          <Route path={CONSTANTS.HOME}>
+            <Route index element={<Home />} />
+            <Route path={CONSTANTS.RESULTS} element={<Results />} />
+            <Route path={CONSTANTS.INFO} element={<Info />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </SearchContextProvider>
     </ThemeProvider>
   );
 };
