@@ -6,6 +6,11 @@ const globalStyle = (theme: any) => ({
     fontFamily: "'Roboto', sans-serif",
     minHeight: '100vh',
   },
+  '#root': {
+    height: '100vh',
+    display: 'flex',
+    flexDirection: 'column' as 'column',
+  },
 });
 
 export default globalStyle;

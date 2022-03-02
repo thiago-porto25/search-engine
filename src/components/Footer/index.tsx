@@ -1,7 +1,17 @@
 import React from 'react';
+import { Typography, useTheme } from '@mui/material';
+import Container from './styles';
 
-interface FooterProps {}
+const Footer: React.FC = () => {
+  const theme = useTheme();
 
-const Footer: React.FC<FooterProps> = () => <div>Footer</div>;
+  return (
+    <Container background={theme.palette.primary.main}>
+      <Typography variant="text" component="p" color="white" textAlign="center">
+        &copy; Thiago Porto. All Rights Reserved.
+      </Typography>
+    </Container>
+  );
+};
 
 export default Footer;
