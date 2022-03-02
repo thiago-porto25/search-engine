@@ -1,4 +1,4 @@
-import React, { createContext, useMemo, useState } from 'react';
+import { createContext, useMemo, useState, FC } from 'react';
 import { PaletteMode } from '@mui/material';
 
 interface Context {
@@ -11,7 +11,7 @@ const ThemeContext = createContext<Context>({
   toggleTheme: () => {},
 });
 
-const ThemeProvider: React.FC = ({ children }) => {
+const ThemeProvider: FC = ({ children }) => {
   const [mode, setMode] = useState<PaletteMode>('light');
   const toggleTheme = () => {
     setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
