@@ -5,6 +5,8 @@ import { ThemeContext } from 'context/themeContext';
 import { SearchContextProvider } from 'context/searchContext';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { GlobalStyles } from '@mui/material';
+import globalStyle from 'styles/globalStyle';
 import getDesignTokens from 'styles/theme';
 
 import { Home, Info, NotFound, Results } from 'pages';
@@ -19,6 +21,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyles styles={globalStyle} />
       <SearchContextProvider>
         <Header />
         <Routes>

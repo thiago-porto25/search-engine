@@ -5,11 +5,21 @@ import { PaletteMode } from '@mui/material';
 declare module '@mui/material/styles' {
   interface TypographyVariants {
     homeLogo: React.CSSProperties;
+    pageLogo: React.CSSProperties;
+    notFound: React.CSSProperties;
+    text: React.CSSProperties;
+    button: React.CSSProperties;
+    title: React.CSSProperties;
   }
 
   // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
     homeLogo?: React.CSSProperties;
+    pageLogo?: React.CSSProperties;
+    notFound?: React.CSSProperties;
+    text?: React.CSSProperties;
+    button?: React.CSSProperties;
+    title?: React.CSSProperties;
   }
 }
 
@@ -17,6 +27,11 @@ declare module '@mui/material/styles' {
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     homeLogo: true;
+    pageLogo: true;
+    notFound: true;
+    text: true;
+    button: true;
+    title: true;
   }
 }
 
