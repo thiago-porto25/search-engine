@@ -14,6 +14,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 
 import * as CONSTANTS from 'constants/index';
+import ErrorMessage from 'components/ErrorMessage';
 
 const App = () => {
   const { mode } = useContext(ThemeContext);
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
+        <ErrorMessage />
       </SearchContextProvider>
     </ThemeProvider>
   );

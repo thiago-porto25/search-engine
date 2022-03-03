@@ -28,6 +28,7 @@ const handleSearch = async (
     const data = await result.data;
     setResults(data);
     navigate(`/${CONSTANTS.RESULTS}`);
+    setError('');
   } catch (error: any) {
     setError(error.message);
   }

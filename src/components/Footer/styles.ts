@@ -7,6 +7,7 @@ interface Props {
 const Container = styled.footer<Props>`
   background-color: ${(p) => p.background};
   height: 56px;
+  min-height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
