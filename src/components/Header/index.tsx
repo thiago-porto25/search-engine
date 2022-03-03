@@ -28,7 +28,7 @@ const Header: React.FC = () => {
   };
 
   const isResults = useMemo(
-    () => location.pathname === `/${CONSTANTS.RESULTS}`,
+    () => (location.pathname === `/${CONSTANTS.RESULTS}` ? true : undefined),
     [location]
   );
 

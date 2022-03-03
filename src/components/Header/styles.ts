@@ -15,7 +15,7 @@ export const Container = styled.header`
 `;
 
 interface FrameProps {
-  isresults: boolean;
+  isresults: boolean | undefined;
 }
 
 export const Frame = styled.div<FrameProps>`
@@ -35,7 +35,7 @@ export const Frame = styled.div<FrameProps>`
 interface IconProps {
   color: string;
   hovercolor: string;
-  isresults: boolean;
+  isresults: boolean | undefined;
 }
 
 export const Icon = styled(SettingsIcon)<IconProps>`
