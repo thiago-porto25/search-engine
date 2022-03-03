@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React, { useContext, useMemo, useState } from 'react';
 import { useTheme, Menu, MenuItem } from '@mui/material';
 import { useLocation } from 'react-router-dom';
@@ -74,9 +75,7 @@ const Header: React.FC = () => {
             toggleTheme();
           }}
         >
-          Set
-          {mode === 'light' ? 'dark' : 'light'}
-          mode
+          Set {mode === 'light' ? 'dark' : 'light'} mode
         </MenuItem>
       </Menu>
     </Container>

@@ -1,7 +1,7 @@
 import React from 'react';
 
-interface ButtonProps {}
+interface SearchbarProps {}
 
-const Button: React.FC<ButtonProps> = () => <div>Button</div>;
+const Searchbar: React.FC<SearchbarProps> = () => <div>Searchbar</div>;
 
-export default Button;
+export default Searchbar;
