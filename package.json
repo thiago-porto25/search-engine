@@ -42,6 +42,9 @@
       "import/no-unresolved": 0,
       "comma-dangle": 0,
       "object-curly-newline": 0,
+      "indent": 0,
+      "no-confusing-arrow": 0,
+      "implicit-arrow-linebreak": 0,
       "react/function-component-definition": [
         2,
         {
