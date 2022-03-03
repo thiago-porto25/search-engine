@@ -93,14 +93,15 @@ const getDesignTokens: any = (mode: PaletteMode) => ({
     text: {
       fontSize: '16px',
       lineHeight: '125%',
-      fontWeight: 'regular',
+      fontWeight: 'normal',
       fontFamily: 'Roboto',
     },
     button: {
       fontSize: '24px',
       lineHeight: '125%',
-      fontWeight: 'regular',
+      fontWeight: 'normal',
       fontFamily: 'Roboto',
+      textTransform: 'none',
       '@media only screen and (max-width:900px)': {
         fontSize: '16px',
       },
