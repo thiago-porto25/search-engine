@@ -29,7 +29,7 @@ const Info: React.FC = () => {
   return loading ? (
     <Loading />
   ) : (
-    <Box maxWidth="936px" margin="24px auto 0 auto">
+    <Box maxWidth="936px" margin="24px auto 0 auto" sx={{ padding: '0 2.5%' }}>
       <Typography variant="title" component="h2" marginBottom="32px">
         {currentInfoPage?.title}
       </Typography>
@@ -41,13 +41,20 @@ const Info: React.FC = () => {
             height: '100%',
           }}
           src={`/images/${currentInfoPage?.photo}`}
-          alt={currentInfoPage?.short_description}
+          alt={currentInfoPage?.shortDescription}
         />
       </Box>
       <Typography variant="text" component="p" marginBottom="32px">
         {currentInfoPage?.description}
       </Typography>
-      <Link style={{ textDecoration: 'none' }} to={`/${CONSTANTS.RESULTS}`}>
+      <Link
+        style={{
+          textDecoration: 'none',
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+        to={`/${CONSTANTS.RESULTS}`}
+      >
         <Button>Back to Results</Button>
       </Link>
     </Box>

@@ -11,7 +11,7 @@ export interface Result {
   title: string;
   photo: string;
   description: string;
-  short_description: string;
+  shortDescription: string;
 }
 
 interface Context {

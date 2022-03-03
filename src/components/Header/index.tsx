@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React, { useContext, useMemo, useState } from 'react';
 import { useTheme, Menu, MenuItem } from '@mui/material';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { ThemeContext } from 'context/themeContext';
 
@@ -38,9 +38,9 @@ const Header: React.FC = () => {
     <Container>
       {location.pathname !== CONSTANTS.HOME ? (
         <Frame isresults={isResults}>
-          <a href={CONSTANTS.HOME} title="Go to homepage">
+          <Link to={CONSTANTS.HOME} title="Go to homepage">
             <Logo path={location.pathname} />
-          </a>
+          </Link>
           {location.pathname === `/${CONSTANTS.RESULTS}` && (
             <>
               <Searchbar handleKeyUp={handleEnterSearch} />
