@@ -7,6 +7,8 @@ import Searchbar from 'components/Searchbar';
 import Logo from 'components/Logo';
 import Button from 'components/Button';
 
+import { handleClickSearch, handleEnterSearch } from 'helpers/handleSearch';
+
 const Home: React.FC = () => {
   const location = useLocation();
 
@@ -20,8 +22,8 @@ const Home: React.FC = () => {
       rowGap="32px"
     >
       <Logo path={location.pathname} />
-      <Searchbar />
-      <Button>Teste</Button>
+      <Searchbar handleKeyUp={handleEnterSearch} />
+      <Button handleClick={handleClickSearch}>Search</Button>
     </Box>
   );
 };

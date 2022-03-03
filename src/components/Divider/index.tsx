@@ -10,7 +10,7 @@ const Divider: React.FC = () => {
         display: { xs: 'initial', md: 'none' },
         width: '100%',
         borderBottomWidth: '2px',
-        background: theme.palette.background.border,
+        background: theme.palette.divider.main,
         marginBottom: '32px',
       }}
     />

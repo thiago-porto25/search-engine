@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import { ThemeContext } from 'context/themeContext';
 
 import * as CONSTANTS from 'constants/index';
+import { handleEnterSearch } from 'helpers/handleSearch';
 import { Container, Frame, Icon } from './styles';
 
 import Logo from '../Logo';
@@ -42,7 +43,7 @@ const Header: React.FC = () => {
           </a>
           {location.pathname === `/${CONSTANTS.RESULTS}` && (
             <>
-              <Searchbar />
+              <Searchbar handleKeyUp={handleEnterSearch} />
               <Divider />
             </>
           )}

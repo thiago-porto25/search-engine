@@ -44,9 +44,10 @@ const getDesignTokens: any = (mode: PaletteMode) => ({
           primaryLight: '#8AC7DB',
           primaryLighter: '#ADD8E6',
           secondary: { main: '#202124' },
+          divider: { main: '#F9F9F9' },
           background: {
             page: '#ffffff',
-            border: '#F9F9F9',
+            border: '#cccccc',
             search: '#ffffff',
           },
         }
@@ -55,6 +56,7 @@ const getDesignTokens: any = (mode: PaletteMode) => ({
           primaryLight: '#338BA8',
           primaryLighter: '#43A6C6',
           secondary: { main: '#ffffff' },
+          divider: { main: '#303134' },
           background: {
             page: '#202124',
             border: '#303134',
