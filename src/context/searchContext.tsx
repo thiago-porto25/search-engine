@@ -21,8 +21,6 @@ interface Context {
   setResults?: Dispatch<SetStateAction<Result[]>>;
   currentInfoPage?: Result | null;
   setCurrentInfoPage?: Dispatch<SetStateAction<Result | null>>;
-  loading?: boolean;
-  setLoading?: Dispatch<SetStateAction<boolean>>;
   error?: string;
   setError?: Dispatch<SetStateAction<string>>;
 }
@@ -33,7 +31,7 @@ const SearchContextProvider: FC = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState<Result[]>([]);
   const [currentInfoPage, setCurrentInfoPage] = useState<Result | null>(null);
-  const [loading, setLoading] = useState(false);
+
   const [error, setError] = useState('');
 
   const providedContext = useMemo(
@@ -42,14 +40,13 @@ const SearchContextProvider: FC = ({ children }) => {
       setResults,
       currentInfoPage,
       setCurrentInfoPage,
-      loading,
-      setLoading,
+
       error,
       setError,
       searchTerm,
       setSearchTerm,
     }),
-    [results, currentInfoPage, error, loading, searchTerm]
+    [results, currentInfoPage, error, searchTerm]
   );
 
   return (
