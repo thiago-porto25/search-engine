@@ -29,15 +29,15 @@ const Header: React.FC = () => {
     setAnchorEl(null);
   };
 
-  const isResults = useMemo(
-    () => (location.pathname === `/${CONSTANTS.RESULTS}` ? true : undefined),
+  const isResults: boolean = useMemo(
+    () => location.pathname === `/${CONSTANTS.RESULTS}`,
     [location]
   );
 
   return (
     <Container>
       {location.pathname !== CONSTANTS.HOME ? (
-        <Frame isresults={isResults}>
+        <Frame $isresults={isResults}>
           <Link to={CONSTANTS.HOME} title="Go to homepage">
             <Logo path={location.pathname} />
           </Link>
@@ -52,7 +52,7 @@ const Header: React.FC = () => {
         <div />
       )}
       <Icon
-        isresults={isResults}
+        $isresults={isResults}
         color={theme.palette.primary.main}
         hovercolor={theme.palette.primary.light}
         id="basic-button"

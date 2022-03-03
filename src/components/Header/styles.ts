@@ -15,7 +15,7 @@ export const Container = styled.header`
 `;
 
 interface FrameProps {
-  isresults: boolean | undefined;
+  $isresults: boolean;
 }
 
 export const Frame = styled.div<FrameProps>`
@@ -28,14 +28,14 @@ export const Frame = styled.div<FrameProps>`
     width: 100%;
     row-gap: 32px;
     column-gap: 0;
-    align-items: ${(p) => !p.isresults && 'flex-start'};
+    align-items: ${(p) => !p.$isresults && 'flex-start'};
   }
 `;
 
 interface IconProps {
   color: string;
   hovercolor: string;
-  isresults: boolean | undefined;
+  $isresults: boolean;
 }
 
 export const Icon = styled(SettingsIcon)<IconProps>`
@@ -57,7 +57,7 @@ export const Icon = styled(SettingsIcon)<IconProps>`
     height: 32px;
 
     ${(p) =>
-      p.isresults
+      p.$isresults
         ? css`
             position: absolute;
             top: 16px;

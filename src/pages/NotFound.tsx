@@ -24,7 +24,7 @@ export const NotFound: React.FC = () => (
       Oops... It seems that this page doesn&apos;t exist!
     </Typography>
     <Link style={{ textDecoration: 'none' }} to={CONSTANTS.HOME}>
-      <Button>Go Home</Button>
+      <Button handleClick={() => {}}>Go Home</Button>
     </Link>
   </Box>
 );
