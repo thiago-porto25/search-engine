@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+# Getting Started with Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### here's what you need to run the project:
 
-## Available Scripts
+- Git with SSH key configured
+- Node JS version 17.5
+- npm 8.4.1
 
-In the project directory, you can run:
 
-### `npm start`
+### How it was done
+You can take a look at how was the proccess to create this app in my [projects board](https://github.com/thiago-porto25/search-engine/projects/1). In it you can find all the tasks created for the project and if you click them you will be redirected to their correspondent Issue and you will be able to find more information about those tasks. I would recommend taking a look the design Issues as they have a link to the Figma for the project.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### How to run the project
 
-### `npm test`
+First you must clone this repository and the [API repository](https://github.com/thiago-porto25/search-engine-api):
+```bash
+git clone git@github.com:thiago-porto25/search-engine.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+git clone git@github.com:thiago-porto25/search-engine-api.git
+```
 
-### `npm run build`
+After that you must cd into both directiories and run `npm install` to install their dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# search-engine
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+cd search-engine
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install
+```
 
-### `npm run eject`
+```bash
+# search-engine-api
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+cd search-engine-api
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Afterwards you must start the projects:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+# search-engine
 
-## Learn More
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# search-engine-api
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm run dev
+```
+
+After that go to your browser at `localhost:3000` and interact with the app. In it you can search for different words. Because the sample array is limited I would suggest searching for these words:
+
+- Dog
+- Cat
+- Field
+- Space
+- Football
+- Basketball
+- Developer
+- Beach
+
+#### Ps.: You must run both projects together for them to work properly.
